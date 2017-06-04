@@ -217,8 +217,8 @@ PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
   pCapabilities->bHandlesInputStream         = true;
   pCapabilities->bHandlesDemuxing            = true;
   pCapabilities->bSupportsRecordingEdl       = true;
-  pCapabilities->bSupportsRecordingPlayCount = (tvh->GetProtocol() >= 26);
-  pCapabilities->bSupportsLastPlayedPosition = (tvh->GetProtocol() >= 26);
+  pCapabilities->bSupportsRecordingPlayCount = (tvh->GetProtocol() >= 27 && Settings::GetInstance().GetDvrPlayStatus());
+  pCapabilities->bSupportsLastPlayedPosition = (tvh->GetProtocol() >= 27 && Settings::GetInstance().GetDvrPlayStatus());
 
   return PVR_ERROR_NO_ERROR;
 }
