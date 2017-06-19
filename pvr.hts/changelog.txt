@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 4.0.15
 - Added support for 'default' recording priority setting value
 
@@ -21,6 +22,8 @@
 - set dependency version values automatically during build
 - PVR API: Removed unused addon interface functions
 
+=======
+>>>>>>> parent of 39d0ebe... change to automatic depends set on addon.xml
 4.0.9
 - fixed: timeshift state and data calculation if demuxer is not active (e.g. when playing a recording)
 
