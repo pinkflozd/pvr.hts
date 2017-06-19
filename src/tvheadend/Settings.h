@@ -53,7 +53,6 @@ namespace tvheadend {
     static const int         DEFAULT_DVR_PRIO;        // any dvr_prio_t numeric value
     static const int         DEFAULT_DVR_LIFETIME;    // 0..14 (0 = 1 day, 14 = forever)
     static const int         DEFAULT_DVR_DUBDETECT;   // 0..5  (0 = record all, 5 = limit to once a day)
-    static const bool        DEFAULT_DVR_PLAYSTATUS;
 
     /**
      * Singleton getter for the instance
@@ -95,7 +94,6 @@ namespace tvheadend {
     int         GetDvrPriority() const { return m_iDvrPriority; }
     int         GetDvrDupdetect() const { return m_iDvrDupdetect; }
     int         GetDvrLifetime(bool asEnum = false) const;
-    bool        GetDvrPlayStatus() const { return m_bDvrPlayStatus; }
 
   private:
     Settings()
@@ -116,8 +114,7 @@ namespace tvheadend {
       m_strStreamingProfile(DEFAULT_STREAMING_PROFILE),
       m_iDvrPriority(DEFAULT_DVR_PRIO),
       m_iDvrLifetime(DEFAULT_DVR_LIFETIME),
-      m_iDvrDupdetect(DEFAULT_DVR_DUBDETECT),
-      m_bDvrPlayStatus(DEFAULT_DVR_PLAYSTATUS) {}
+      m_iDvrDupdetect(DEFAULT_DVR_DUBDETECT) {}
 
     Settings(Settings const &) = delete;
     void operator=(Settings const &) = delete;
@@ -142,7 +139,6 @@ namespace tvheadend {
     void SetDvrPriority(int value) { m_iDvrPriority = value; }
     void SetDvrLifetime(int value) { m_iDvrLifetime = value; }
     void SetDvrDupdetect(int value) { m_iDvrDupdetect = value; }
-    void SetDvrPlayStatus(int value) { m_bDvrPlayStatus = value; }
 
     /**
      * Read/Set values according to definition in settings.xml
@@ -174,7 +170,6 @@ namespace tvheadend {
     int         m_iDvrPriority;
     int         m_iDvrLifetime;
     int         m_iDvrDupdetect;
-    bool        m_bDvrPlayStatus;
   };
 
 }
