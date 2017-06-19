@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 4.0.15
 - Added support for 'default' recording priority setting value
 
@@ -14,6 +15,8 @@
 4.0.11
 - PVR API: Removed obsolete version functions
 
+=======
+>>>>>>> parent of d23bc92... remove no more needed version functions
 4.0.10
 - set dependency version values automatically during build
 - PVR API: Removed unused addon interface functions
